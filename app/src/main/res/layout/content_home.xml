@@ -1,0 +1,334 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000"
+    tools:showIn="@layout/app_bar_home">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="che"
+    >
+<ImageView
+    android:id="@+id/heroImageView"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/aboutus"
+    android:scaleType="fitCenter"
+    />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp"
+        android:layout_below="@+id/heroImageView"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/l1"
+            >
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardv1"
+            android:onClick="card2"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#8c42b1"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:id="@+id/total_event"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:paddingLeft="10dp"
+                    android:layout_centerHorizontal="true"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Events"
+                    android:id="@+id/set_event"
+                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    android:layout_below="@+id/total_event"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardv2"
+            android:onClick="card2"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@+id/cardv1"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5178c3"
+        android:layout_gravity="right|top"
+        android:layout_centerHorizontal="true"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:id="@+id/conference"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentTop="true"
+            android:textSize="20dp"
+            android:textColor="#fff"
+            android:paddingLeft="10dp"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Conference "
+            android:id="@+id/set_conference"
+            android:textSize="18dp"
+            android:textColor="#fff"
+            android:layout_below="@+id/conference"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardv3"
+            android:onClick="card3"
+            android:layout_marginLeft="1dp"
+            android:layout_toRightOf="@+id/cardv2"
+            android:layout_marginRight="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#57a8b9"
+                android:layout_centerHorizontal="true"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register"
+                    android:id="@+id/credit_name1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" HERE "
+                    android:id="@+id/refund_date1"
+                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    android:layout_below="@+id/credit_name1"
+                    android:layout_centerHorizontal="true"
+                     />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        </LinearLayout>
+</RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="insideInset"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:layout_below="@+id/sp"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card4"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2b2735"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ongoing Events Navigation"
+                    android:id="@+id/about"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Here "
+                    android:id="@+id/about_set"
+                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    android:layout_below="@+id/about"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card5"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+
+        >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2b2735"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paper Presentation"
+                    android:id="@+id/about_isca"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Here "
+                    android:id="@+id/aboutisca_set"
+                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    android:layout_below="@+id/about_isca"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView><android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card6"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+        >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2b2735"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Programme Schedule"
+                    android:id="@+id/event"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Here"
+                    android:id="@+id/event_set"
+                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    android:layout_below="@+id/event"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card7"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="1dp"
+        >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#2b2735"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact Us"
+                    android:id="@+id/contact"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Here "
+                    android:id="@+id/contact_set"
+                    android:textSize="18dp"
+                    android:textColor="#fff"
+                    android:layout_below="@+id/contact"
+                    android:layout_centerHorizontal="true"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+</FrameLayout>

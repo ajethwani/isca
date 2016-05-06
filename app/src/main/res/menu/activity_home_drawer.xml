@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_graph"
+            android:title="Paper Presentation" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_contacts"
+                android:title="Schedule" />
+            <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/ic_shopping"
+            android:title="Contact Book" />
+            <item
+                android:id="@+id/nav_send1"
+                android:icon="@android:drawable/ic_dialog_map"
+                android:title="About" />
+            <item
+                android:id="@+id/nav_send2"
+                android:icon="@android:drawable/ic_dialog_map"
+                android:title="About SRM" /><item
+                android:id="@+id/nav_send3"
+                android:icon="@android:drawable/ic_dialog_map"
+                android:title="About ISCA" />
+        </menu>
+    </item>
+
+</menu>
