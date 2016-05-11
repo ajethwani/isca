@@ -13,8 +13,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import srm.isca.com.isca.Maps.Events_list;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity
     Animation hide_fab_2;
     Animation show_fab_3;
     Animation hide_fab_3;
+    TextView nav;
 
     private int MAX_ROWS = 10;
     @Override
@@ -42,6 +47,9 @@ public class MainActivity extends AppCompatActivity
         fab2 = (FloatingActionButton) findViewById(R.id.fab_2);
         fab3 = (FloatingActionButton) findViewById(R.id.fab_3);
 
+        //TextView for OnGoing Events
+        nav = (TextView) findViewById(R.id.about);
+
         //Animations
         show_fab_1 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab1_show);
         hide_fab_1 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab1_hide);
@@ -49,6 +57,16 @@ public class MainActivity extends AppCompatActivity
         hide_fab_2 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab2_hide);
         show_fab_3 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab3_show);
         hide_fab_3 = AnimationUtils.loadAnimation(getApplication(), R.anim.fab3_hide);
+
+
+        //Handles On Click Listener for On Going Events
+        nav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(), Events_list.class);
+                startActivity(i);
+            }
+        });
 
 
             fab.setOnClickListener(new View.OnClickListener() {
